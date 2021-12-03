@@ -1,5 +1,6 @@
 import { Client } from "discord.js";
 import {readdir} from "fs/promises";
+import * as fs from "fs";
 import * as events from "./events";
 export * as leaderboard from "./leaderboard/leaderboard";
 export * as mee6Manager from "./mee6/mee6";
@@ -28,7 +29,7 @@ export function loadCommands() {
 loadCommands();
 events.loadEvents(commands);
 
-let token = "NzYxNjk3NzEzNjc4ODQzOTA0.X3eYRg.98MOnuwFI4_lELzU2hVRtKBB6VA";
+let token = JSON.parse(fs.readFileSync("./token.json").toString())["token"];
 bot.login(token);
 
 export let guildId: string;
