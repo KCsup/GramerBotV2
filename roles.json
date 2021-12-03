@@ -1,0 +1,12 @@
+{
+  "roles": [
+    { "name": "[0] Gramer", "level": 0 },
+    { "name": "[5] Gramer Sr.", "level": 5 },
+    { "name": "[10] Average Gramer", "level": 10 },
+    { "name": "[15] Cool Gramer", "level": 15 },
+    { "name": "[25] Great Gramer 🌒", "level": 25 },
+    { "name": "[30] Glorious Gramer 🌓", "level": 30 },
+    { "name": "[40] Grand Gramer 🌔", "level": 40 },
+    { "name": "[50] Legendary Gramer 🌕", "level": 50 }
+  ]
+}

@@ -1,0 +1,1 @@
+export { loadCommands as listener } from "../main";
