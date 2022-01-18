@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "discord.js": "^13.1.0",
-    "mee6-levels-api": "^1.3.0"
+    "mee6-levels-api": "^1.3.0",
+    "ts-node": "^10.4.0"
   }
 }

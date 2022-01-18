@@ -8,8 +8,8 @@ export function getRolesJson() {
     return JSON.parse(fs.readFileSync(rolesFile).toString());
 }
 
-export async function getUserInfo(guildId, memberId) {
-    return await main.mee6.getUserXp(guildId, memberId);
+export function getUserInfo(guildId, memberId) {
+    return main.mee6.getUserXp(guildId, memberId);
 }
 
 export async function getAllUserInfo(guildId) {

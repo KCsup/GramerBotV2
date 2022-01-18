@@ -32,4 +32,6 @@ events.loadEvents(commands);
 let token = JSON.parse(fs.readFileSync("./token.json").toString())["token"];
 bot.login(token);
 
-export let guildId: string;
+setTimeout(() => {
+    console.log("5 seconds")
+}, 5000);

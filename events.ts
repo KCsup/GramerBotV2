@@ -27,23 +27,23 @@ export function loadEvents(commands) {
             }
         }
 
-        if(msg.author.username == "travisscott") {
-            msg.delete();
-        }
-
         if(await main.mee6Manager.getUserInfo(guild.id, msg.author.id) == undefined) return;
         let userLevel: number = (await main.mee6Manager.getUserInfo(guild.id, msg.author.id)).level;
         for(let role of await main.mee6Manager.getRoles(guild.id)) {
             if(userLevel >= role["level"] && 
             !(await main.mee6Manager.getUserRoles(guild.id, msg.author.id)).some(uRole => uRole.name == role['name'])) {
-                let member: discord.GuildMember = await guild.members.fetch(msg.author.id);
-                member.roles.add(role["role"]);
+                msg.member.roles.add(role["role"]);
                 msg.channel.send(`Woah, congratulations on reaching level ${role["level"]} <@${msg.author.id}>!`)
             }
         }
     });
 
+    main.bot.on("error", (error: Error) => {
+        console.log(`${error.message}\n${error.stack}`);
+    })
+
     main.bot.on("ready", () => {
         console.log("Gramers Bot Ready!");
     })
+
 }
